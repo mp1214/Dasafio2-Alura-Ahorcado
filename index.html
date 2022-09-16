@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ahorcado</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="imagenes/Vector.png" alt="Logo Alura"></a>
+    </header>
+    <div class="fondo">
+
+    </div>
+    <section class="seccion1" id="seccion1">
+        <div class="buttons">
+        <input type="button" class="btn-iniciar boton" value="Iniciar Juego" onclick="iniciarJuego()">
+        <input type="button"  class="btn-nueva boton" value="Agregar nueva palabra" onclick="agregarPalabra()">
+        </div>
+
+    </section>
+
+    <section class="seccion2 ocultar">
+        
+        <input type="text" id="area" name="text" class="textarea palabra" placeholder="Ingrese una palabra" >
+        <div class="botones">
+        <div class="avisos">
+           
+            <p class="parrafo-aviso">Máx. de 8 letras</p>
+        </div>
+        <input type="button" class="boton-guardar boton" value="Guardar y empezar" onclick="guardarPalabra()">
+        <input type="button" class="boton-cancelar boton" value="Cancelar" onclick="salir()">
+      </div>
+    </section>
+
+    <section class="seccion3 ocultar" id="seccion3">
+        
+       
+
+        <div class="contenedor-canvas" id="contenedorcanvas">
+        <canvas id="canvas"></canvas>
+        </div>
+
+        
+
+        <div class="contenedor-letras-bien" id="contenedor-letras-bien">
+            <canvas id="canvas1"></canvas>
+        </div>
+
+        <div class="contenedor-letras-mal" >
+            <p id="contenedor-letras-mal"> </p>
+        </div>
+
+        <div class="contenedor-btn">
+            <div class="botons">
+                <input type="button" id="btn-njuego" class="btn-njuego boton" value="Nuevo juego" onClick="limpiarLienzo()">
+                <input type="button" id="reset" class="btn-rendirse boton" value="Rendirse" onclick="salir()">
+            </div>
+        </div>
+        </section>
+    <footer>
+    <p>©Copyright - Oracle Programa ONE(Alura) - Patricia Cayo </p>
+    </footer>
+       
+        <script src="canvas.js" var caracter=""  var letrasErradas=[];></script>
+        <script src="horca.js"></script>
+        <script src="capturateclado.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
